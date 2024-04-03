@@ -20,7 +20,7 @@ module.exports = async function userCreate(req, res) {
             return {
                 description: exercise.description,
                 duration: exercise.duration,
-                date: exercise.date ? exercise.date.toDateString('en-US', options) : ''
+                date: exercise.date ? exercise.date.toDateString() : ''
             };
         });
 

@@ -21,14 +21,14 @@ module.exports = async function userCreate(req, res) {
             day: '2-digit'
         };
 
-        const formattedDate = newDate.toDateString('en-US', options);
+        const formattedDate = newDate.toDateString();
 
         return res.send({
             username: user.username,
             description: description,
-            duration: duration,
+            duration: parseInt(duration),
             date: formattedDate,
-            _id: newExercises._id
+            _id: _id
         });
     } catch (error) {
         console.error(error);
