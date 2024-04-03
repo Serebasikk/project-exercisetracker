@@ -1,0 +1,6 @@
+{
+    "username": {
+        "type": "String",
+        "required": true
+    }
+}
